@@ -13,6 +13,7 @@ $data =  $_SESSION['data'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting_System-Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body class="bg-secondary text-light">
    <div class="container my-5">
