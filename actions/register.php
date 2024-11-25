@@ -35,7 +35,7 @@ if(isset($_POST["register"])){
         header("location:  ../partials/registration.php?singup=fileError");
     }
     else if(availableMobilenumber($conn,$mobilenumber)){
-        header("location:  ../partials/registration.php?singup=fileError");
+        header("location:  ../partials/registration.php?singup=mobilenumbnerAvailable");
     }else{
         userRegistration($conn,$username,$mobilenumber,$password,$cpassword,$photo, $photoTmpName, $photosize , $photoerror,$phototype,$std);
     }
