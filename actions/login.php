@@ -4,6 +4,9 @@ include "connect.php";
 
 session_start();
 
+
+
+
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
     $mobile = $_POST["mobile"];
@@ -41,7 +44,7 @@ if (isset($_POST["login"])) {
                 $_SESSION['id'] = $user['id'];
                 $_SESSION['status'] = $user['status'];
                 $_SESSION['data'] = $user;
-
+               
                 header("location: ../partials/dashboard.php?login=success");
                 exit();
             } else {
