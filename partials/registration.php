@@ -34,7 +34,7 @@
                     </select>
                  </div>
          <button type="submit" class="btn btn-dark my-4" name="register">Register</button>
-         <p>Alredy have an account?<a href="../login.php" class="text-white"> Login here</a></p>
+         <p>Alredy have an account?<a href="../index.php" class="text-white"> Login here</a></p>
         </form>
       </div>
    </div>
