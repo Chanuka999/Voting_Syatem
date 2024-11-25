@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_GET["photo"])){
+    $photo=$_GET["photo"];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +19,7 @@
     <div class="bg-info py-4">
         <h2 class="text-center">Login</h2>
         <div class="container text-center">
-            <form action="./actions/login.php" method="POST">
+            <form action="./actions/login.php?newphoto=$photo" method="POST">
                 <div class="mb-3">
                     <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter your username" require="requried">
                  </div>
