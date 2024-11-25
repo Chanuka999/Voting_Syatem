@@ -64,9 +64,9 @@ function fileErrorHandling($photo,$photoTmpName,$photosize,$photoerror,$phototyp
         if($photoerror === 0){
             if($photosize <1000000){
               
-                $fileNewname = uniqid('',true).".".$fileActualExt;
+               // $fileNewname = uniqid('',true).".".$fileActualExt;
 
-                $fileDest = '../uploads/'.$fileNewname;
+                $fileDest = '../uploads/'.$photo;
                 move_uploaded_file($photoTmpName,$fileDest);
                 $value=false;
             }else{
