@@ -17,25 +17,25 @@ if(isset($_POST["register"])){
 
 
     if(emptyValues($username,$mobilenumber,$password,$cpassword,$photo,$std)){
-        header("location: registration.php?singup=emptyError");
+        header("location: ../partials/registration.php?singup=emptyError");
     }
     else if(invalidUsername($username)){
-        header("location: registration.php?singup=invalidUsername");
+        header("location:  ../partials/registration.php?singup=invalidUsername");
     }
     else if(invalidMobilenumber($mobilenumber)){
-        header("location: registration.php?singup=invalidMobilenumber");
+        header("location:  ../partials/registration.php?singup=invalidMobilenumber");
     }
     else if(invalidPassword($password)){
-        header("location: registration.php?singup=invalidpassword");
+        header("location:  ../partials/registration.php?singup=invalidpassword");
     }
     else if(notMatchPaasAndCpass($password,$cpassword)){
         header("location: registration.php?singup=notmatchPassword");
     }
     else if(fileErrorHandling($photo,$photoTmpName,$photosize,$photoerror,$phototype)){
-        header("location: registration.php?singup=fileError");
+        header("location:  ../partials/registration.php?singup=fileError");
     }
     else if(availableMobilenumber($conn,$mobilenumber)){
-        header("location: registration.php?singup=fileError");
+        header("location:  ../partials/registration.php?singup=fileError");
     }else{
         userRegistration($conn,$username,$mobilenumber,$password,$cpassword,$photo, $photoTmpName, $photosize , $photoerror,$phototype,$std);
     }
