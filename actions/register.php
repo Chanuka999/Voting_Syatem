@@ -43,7 +43,7 @@ if(isset($_POST["register"])){
     
 }
 function userRegistration($conn,$username,$mobilenumber,$password,$cpassword,$photo, $photoTmpName, $photosize , $photoerror,$phototype,$std){
-
+  
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO user (username,mobile,password,photo,standard,status,votes) VALUES ('$username','$mobilenumber','$passwordHash','$photo','$std',0,0);";
