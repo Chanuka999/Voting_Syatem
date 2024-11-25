@@ -11,7 +11,7 @@
    <div class="bg-info py-4">
    <h2 class="text-center">Register Account</h2>
       <div class="container text-center">
-        <form action="">
+        <form action="../actions/register.php" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
         <input type="text" class="form-control w-50 m-auto" name="username" placeholder="Enter your username" require="requried">
         </div>
@@ -33,7 +33,7 @@
                         <option value="voter">voter</option>
                     </select>
                  </div>
-         <button type="submit" class="btn btn-dark my-4">Register</button>
+         <button type="submit" class="btn btn-dark my-4" name="register">Register</button>
          <p>Alredy have an account?<a href="../login.php" class="text-white"> Login here</a></p>
         </form>
       </div>
