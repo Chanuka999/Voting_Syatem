@@ -19,6 +19,7 @@ function invalidUsername($username){
     }else{
         $value=false;
     }
+    return $value;
 }
 
 function invalidMobilenumber($mobilenumber){
@@ -28,6 +29,7 @@ function invalidMobilenumber($mobilenumber){
     }else{
         $value=false;
     }
+    return $value;
 }
 
 function invalidPassword($password){
@@ -37,6 +39,7 @@ function invalidPassword($password){
     }else{
         $value=false;
     }
+    return $value;
 }
 
 function notMatchPaasAndCpass($password,$cpassword){
@@ -46,6 +49,7 @@ function notMatchPaasAndCpass($password,$cpassword){
     }else{
         $value=false;
     }
+    return $value;
 }
 
 function fileErrorHandling($photo,$photoTmpName,$photosize,$photoerror,$phototype){
@@ -74,7 +78,7 @@ function fileErrorHandling($photo,$photoTmpName,$photosize,$photoerror,$phototyp
     }else{
        $value=true;
     }
-
+  return $value;
 }
 
 
@@ -100,5 +104,6 @@ function availableMobilenumber($conn,$mobilenumber){
             $value=true;
         }
     }
+    return $value;
 }
 ?>
