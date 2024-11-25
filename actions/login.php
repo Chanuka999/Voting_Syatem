@@ -1,7 +1,6 @@
 <?php
 
 include "connect.php";
-include "register.php";
 
 session_start();
 
@@ -12,10 +11,12 @@ if (isset($_POST["login"])) {
     $std = $_POST["std"];
 
     // Fetch the user record for the given username and mobile
-    $sql = "SELECT * FROM `user` WHERE username = ? AND mobile = ? AND standard = ?";
-    $stmt = mysqli_prepare($conn, $sql);
+    $sql = "SELECT * FROM `user` WHERE username = ? AND mobile = ?  AND standard = ?";
+    
+    $stmt= mysqli_stmt_init($conn);
+  
 
-    if ($stmt) {
+    if (mysqli_stmt_prepare($stmt,$sql)) {
         // Bind parameters to the query
         mysqli_stmt_bind_param($stmt, "sss", $username, $mobile, $std);
         mysqli_stmt_execute($stmt);
