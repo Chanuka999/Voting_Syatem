@@ -2,6 +2,11 @@
 
 session_start();
 $data =  $_SESSION['data'];
+if($_SESSION['status']==1){
+    $status = '<b class="text-success">Voted</b>';
+}else{
+    $status = '<b class="text-danger">Not Voted</b>';
+}
 
 ?>
 
@@ -39,7 +44,7 @@ $data =  $_SESSION['data'];
             <br>
             <strong class="text-dark h5">Name:</strong><?php echo $data['username'];  ?><br><br>
             <strong class="text-dark h5">Mobile:</strong><?php echo $data['mobile'];  ?><br><br>
-            <strong class="text-dark h5">Status:</strong><?php echo $data['status'];  ?><br><br>
+            <strong class="text-dark h5">Status:</strong><?php echo $status;  ?><br><br>
         </div>
      </div>
    </div>
