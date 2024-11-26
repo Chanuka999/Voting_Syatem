@@ -21,7 +21,7 @@ if($updatevotes and $updatestatus){
     $_SESSION['groups'] = $groups;
     $_SESSION['status'] =1;
     echo '<script>alert("voting successfull")</script>';
-    header("location: ../partials/dashboard.php?");
+    header("location: ../partials/dashboard.php?votingSuccess");
 }else{
     header("location: ../partials/dashboard.php?technicalError=voteAfterSometime");
      
