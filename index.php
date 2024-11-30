@@ -13,6 +13,7 @@ if(isset($_GET["photo"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting system</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body class="bg-dark">
     <h1 class="text-info text-center p-3">Voting System</h1>
